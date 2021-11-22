@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background: hsl(217, 54%, 11%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    min-height: 100vh;
+}
+
+.card {
+    background: hsl(216, 50%, 16%);
+    width: 100%;
+    max-width: 350px;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.card__img--box {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card__img--box::before {
+    content: url(images/icon-view.svg);
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: hsla(178, 100%, 50%, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s ease;
+}
+
+.card__img--box:hover::before {
+    top: 0;
+}
+
+.card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card__title {
+    font-size: 22px;
+    color: hsl(0, 0%, 100%);
+    margin: 20px 0;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+.card__title:hover {
+    color: hsl(178, 100%, 50%);
+}
+
+.card__description {
+    font-size: 18px;
+    color: hsl(215, 51%, 70%);
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.card__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid hsl(215, 32%, 27%);
+}
+
+.card__info>div {
+    display: flex;
+    align-items: center;
+}
+
+.card__info h2 {
+    color: hsl(178, 100%, 50%);
+    font-size: 16px;
+}
+
+.card__info p {
+    color: hsl(215, 51%, 70%);
+}
+
+.card__info img {
+    margin-right: 5px;
+}
+
+.card__meta {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    grid-gap: 15px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.card__meta img {
+    width: 100%;
+    border-radius: 50%;
+    transition: .3s ease;
+}
+
+.card__meta p {
+    color: hsl(215, 51%, 70%);
+    font-weight: 300;
+}
+
+.card__meta p span {
+    color: hsl(0, 0%, 100%);
+    transition: .3s ease;
+}
+
+.card__meta:hover img {
+    box-shadow: 0 0 0 1px hsl(0, 0%, 100%);
+}
+
+.card__meta:hover p span {
+    color: hsl(178, 100%, 50%);
+}
